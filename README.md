@@ -17,3 +17,9 @@
 - [ ] feature engineering
 - [ ] model selection
 - [ ] model training
+- [ ] AI:
+    - [ ] sentiment analysis
+    - [ ] topic modeling
+    - [ ] trend analysis
+    - [ ] time series analysis
+    
