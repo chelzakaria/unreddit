@@ -5,21 +5,31 @@
 
 # TO DO
 - [ ] fix data extraction script
-- [x] cleaning
-    - [x] remove duplicates
-    - [x] remove nulls
-    - [x] remove "deleted" posts
-    - [x] remove "removed" posts
-    - [x] format data types
-    - [x] format text
 - [ ] EDA
-- [ ] save to database
-- [ ] feature engineering
-- [ ] model selection
-- [ ] model training
-- [ ] AI:
-    - [ ] sentiment analysis
-    - [ ] topic modeling
-    - [ ] trend analysis
-    - [ ] time series analysis
-    
+- [ ] Data Preprocessing :
+    - [ ] Stopwords removal
+    - [ ] Lemmatization
+    - [ ] Vectorization
+    - [ ] Tokenization
+- [ ] Topic Modelling :
+    - [ ] LDA
+    - [ ] NMF
+- [ ] Sentiment Analysis :
+    - [ ] VADER
+    - [ ] TextBlob
+    - [ ] BERT
+- [ ] Hot Topic Analysis :
+    - [ ] WordCloud
+    - [ ] Bigram
+    - [ ] Trigram
+    - [ ] TF-IDF
+- [ ] Provoke Analysis :
+    - [ ] Named Entity Recognition
+    - [ ] Dependency Parsing
+    - [ ] Coreference Resolution
+- [ ] Dashboard :
+    - [ ] Distribution of Topics
+    - [ ] Sentiment Analysis
+    - [ ] Hot Topic Analysis
+    - [ ] Provoke Analysis
+
