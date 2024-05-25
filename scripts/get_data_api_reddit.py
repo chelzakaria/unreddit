@@ -50,7 +50,6 @@ def get_data_api_reddit(
             "created_utc",
             "permalink",
             "score",
-            "hide_score",
             "num_comments",
             "media",
             "media_embed",
@@ -89,13 +88,16 @@ def get_data_api_reddit(
             data = requests.get(url, timeout=20).json()["data"]
         except:
             log.error(
-                f"Error in getting {option} data from {start_date - timedelta(days=i)} to {start_date - timedelta(days=i - 1)}"
+                f"Error in getting {option} data from {start_date + timedelta(days=i)} to {start_date + timedelta(days=i + 1)}"
             )
             continue
         log.info(f"Founds {len(data)} {option} data")
         row = []
         for item in data:
             for field in fields:
+                if field not in item:
+                    row.append(None)
+                    continue
                 if field == "created_utc":
                     row.append(datetime.utcfromtimestamp(int(item[field])))
                 else:
@@ -104,19 +106,23 @@ def get_data_api_reddit(
             row = []
 
     dataframe.to_csv(output_path, encoding="utf-8")
+    log.info(f"Data successfully saved to {output_path}")
 
 
-start_date = "2009-01-01"
-end_date = "2024-05-24"
+# start_date = "2011-01-01"
+# end_date = "2013-01-01"
+
+start_date = "2013-01-01"
+end_date = "2016-01-01"
 
 # get subreddit submissions
-get_data_api_reddit(
-    "morocco",
-    start_date,
-    end_date,
-    output_path=f"data/morocco/submissions_{start_date}_{end_date}.csv",
-    option="submissions",
-)
+# get_data_api_reddit(
+#     "morocco",
+#     start_date,
+#     end_date,
+#     output_path=f"data/morocco/submissions_{start_date}_{end_date}.csv",
+#     option="submissions",
+# )
 
 # get subreddit comments
 get_data_api_reddit(
