@@ -78,7 +78,6 @@ def get_data_api_reddit(
     start_date = datetime.strptime(start_date, "%Y-%m-%d").date()
 
     dataframe = pd.DataFrame(columns=fields)
-
     for i in tqdm(range((end_date - start_date).days)):
         log.info(
             f"Getting {option} data from {start_date + timedelta(days=i)} to {start_date + timedelta(days=i + 1)}"
@@ -91,7 +90,9 @@ def get_data_api_reddit(
                 f"Error in getting {option} data from {start_date + timedelta(days=i)} to {start_date + timedelta(days=i + 1)}"
             )
             continue
-        log.info(f"Founds {len(data)} {option} data")
+        log.info(
+            f"Founds {len(data)} {option} data from {start_date + timedelta(days=i)} to {start_date + timedelta(days=i + 1)}"
+        )
         row = []
         for item in data:
             for field in fields:
@@ -109,20 +110,17 @@ def get_data_api_reddit(
     log.info(f"Data successfully saved to {output_path}")
 
 
-# start_date = "2011-01-01"
-# end_date = "2013-01-01"
-
-start_date = "2013-01-01"
-end_date = "2016-01-01"
+start_date = "2024-01-01"
+end_date = "2024-01-02"
 
 # get subreddit submissions
-# get_data_api_reddit(
-#     "morocco",
-#     start_date,
-#     end_date,
-#     output_path=f"data/morocco/submissions_{start_date}_{end_date}.csv",
-#     option="submissions",
-# )
+get_data_api_reddit(
+    "morocco",
+    start_date,
+    end_date,
+    output_path=f"data/morocco/submissions_{start_date}_{end_date}.csv",
+    option="submissions",
+)
 
 # get subreddit comments
 get_data_api_reddit(
