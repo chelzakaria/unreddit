@@ -4,3 +4,4 @@ env
 *.log
 *.bin
 __pycache__
+models/*
