@@ -5,7 +5,7 @@
 #
 # arguments are inputfile, outputfile, fields
 # call this like
-# python to_csv.py wallstreetbets_submissions.zst wallstreetbets_submissions.csv author,selftext,title
+# python read_zst.py wallstreetbets_submissions.zst wallstreetbets_submissions.csv author,selftext,title
 
 import zstandard
 import os
