@@ -1,10 +1,12 @@
-from datetime import datetime, date, timedelta
+""" Get data from Reddit API """
+
 from typing import Optional
-from tqdm import tqdm
-import logging as log
-import pandas as pd
-import requests
+from datetime import datetime, timedelta
 import calendar
+import logging as log
+import requests
+import pandas as pd
+from tqdm import tqdm
 
 log.basicConfig(
     filename="reddit_api_logs.log",
@@ -85,9 +87,9 @@ def get_data_api_reddit(
         url = f"{base_url}&since={calendar.timegm((start_date + timedelta(days=i)).timetuple())}&until={calendar.timegm((start_date + timedelta(days=i + 1)).timetuple())}"
         try:
             data = requests.get(url, timeout=20).json()["data"]
-        except:
+        except Exception as e:
             log.error(
-                f"Error in getting {option} data from {start_date + timedelta(days=i)} to {start_date + timedelta(days=i + 1)}"
+                f"Error ({e}) in getting {option} data from {start_date + timedelta(days=i)} to {start_date + timedelta(days=i + 1)}"
             )
             continue
         log.info(
@@ -110,23 +112,23 @@ def get_data_api_reddit(
     log.info(f"Data successfully saved to {output_path}")
 
 
-start_date = "2024-01-01"
-end_date = "2024-01-02"
+STARTDATE = "2024-01-01"
+ENDDATE = "2024-01-02"
 
 # get subreddit submissions
 get_data_api_reddit(
     "morocco",
-    start_date,
-    end_date,
-    output_path=f"data/morocco/submissions_{start_date}_{end_date}.csv",
+    STARTDATE,
+    ENDDATE,
+    output_path=f"data/morocco/submissions_{STARTDATE}_{ENDDATE}.csv",
     option="submissions",
 )
 
 # get subreddit comments
 get_data_api_reddit(
     "morocco",
-    start_date,
-    end_date,
-    output_path=f"data/morocco/comments_{start_date}_{end_date}.csv",
+    STARTDATE,
+    ENDDATE,
+    output_path=f"data/morocco/comments_{STARTDATE}_{ENDDATE}.csv",
     option="comments",
 )

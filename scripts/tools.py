@@ -1,3 +1,5 @@
+""" This module contains tools for language detection """
+
 from tqdm import tqdm
 import fasttext
 
@@ -16,7 +18,7 @@ def detect_language(docs: list) -> dict:
     for doc in tqdm(docs):
         try:
             _dict[doc] = fasttext_model.predict(doc.replace("\n", " "))
-        except:
+        except Exception:
             _dict[doc] = None
     return _dict
 
