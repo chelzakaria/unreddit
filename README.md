@@ -1,21 +1,19 @@
-![Unreddit Logo](https://github.com/chelzakaria/awesome-readme/raw/master/header.png) 
+## <img src="https://github.com/chelzakaria/unreddit/blob/main/images/Logo.png" alt="drawing" style="width:250px;"/>
 
-# Unreddit 
+
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Overview](#project-overview)
 - [Project Structure](#project-structure)
 - [Data Collection](#data-collection)
-- [Data Cleaning](#data-cleaning)
-- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Data Cleaning & Exploratory Data Analysis (EDA)](#data-cleaning-and-eda)
 - [Topic Modeling](#topic-modeling)
 - [Zero-Shot Classification](#zero-shot-classification)
-- [Sentiment Analysis](#sentiment-analysis)
-- [Emotion Analysis](#emotion-analysis)
+- [Sentiment Analysis](#sentiment-and-emotion-analysis)
 - [Visualization](#visualization)
 - [Conclusion](#conclusion)
-- [References](#references)
+- [References & Resources](#references-and-resources)
 - [License](#license)
 
 
@@ -106,13 +104,13 @@ The project provides a comprehensive analysis of the [r/morocco](https://www.red
 - [BERTopic](https://maartengr.github.io/BERTopic/index.html) - The topic modeling library used in the project.
 - [🤗 Hugging Face Transformers library](https://huggingface.co/transformers/) - The library used for zero-shot classification, sentiment analysis, and emotion analysis.
 - [llama.cpp](https://github.com/abetlen/llama-cpp-python) - The library used for fine-tuning topics in BERTopic.
-- [cuML] (https://github.com/rapidsai/cuml) - The library used to speed up the topic modeling process.
+- [cuML](https://github.com/rapidsai/cuml) - The library used to speed up the topic modeling process.
 - [fastText](https://fasttext.cc/) - The library used to detect the language of the text data.
 - [Power BI](https://powerbi.microsoft.com/) - The business intelligence tool used to create interactive dashboards.
 
 
 
-## References & Resources
+## References and Resources
 
 - [r/morocco subreddit](https://www.reddit.com/r/morocco/)
 - [Pushshift archives](https://the-eye.eu/redarcs/)
