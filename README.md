@@ -36,13 +36,7 @@ Next, we perform [zero-shot classification](https://huggingface.co/tasks/zero-sh
 Finally, we analyze the emotions expressed in the posts and comments. The results of the analysis are visualized through interactive dashboards and detailed plots, providing a comprehensive overview of the subreddit community.
 
 ## Project Structure
-
-The project is structured as follows:
-
-- Data Collection: Scraping posts and comments from the [r/morocco](https://www.reddit.com/r/morocco/) subreddit.
-- Data Cleaning: Cleaning and preprocessing the collected data.
-- Exploratory Data Analysis (EDA): Analyzing the data to identify trends and patterns.
-
+![Project Structure Diagram](https://github.com/chelzakaria/unreddit/assets/80723047/1dd2a8fe-35d2-4157-970a-ee184ee47cf1)
 
 ## Data Collection
 
