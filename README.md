@@ -47,6 +47,10 @@ There is two main ways to collect data from Reddit:
 
     N.B: You have a limit of 100 posts/comments per request.
 
+3. Automating the data collection process using Airflow and AWS S3 bucket (Optional) :
+
+
+
 ## Data Cleaning and EDA
 
 Data cleaning involves removing irrelevant information, handling missing values, removing duplicates, to prepare the data for analysis. EDA involves analyzing the data to identify trends, patterns, and insights.
