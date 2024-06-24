@@ -14,7 +14,6 @@
 - [Visualization](#visualization)
 - [Conclusion](#conclusion)
 - [References & Resources](#references-and-resources)
-- [License](#license)
 
 
 ## Introduction
@@ -48,7 +47,7 @@ There is two main ways to collect data from Reddit:
     N.B: You have a limit of 100 posts/comments per request.
 
 3. Automating the data collection process using Airflow and AWS S3 bucket (Optional) :
-
+TBA
 
 
 ## Data Cleaning and EDA
@@ -89,7 +88,16 @@ But to gain a better understanding of the emotions expressed by the users, we us
 
 ## Visualization
 
-The results of the analysis are visualized through interactive dashboards and detailed plots, providing deep insights into the trends and sentiments of the subreddit community.
+The results of the analysis are visualized through interactive dashboards, providing deep insights into the trends and sentiments of the subreddit community.
+
+### Visualization 1 : Topic Modeling, Categories, and Word Clouds
+<img src="https://github.com/chelzakaria/unreddit/blob/main/images/viz_page1.png" alt="Visualization #1"/>
+
+> The first visualization shows the trending topics in the subreddit, the most common categories, and the word that were used the most in the posts and comments.
+
+*More visualizations TBA*
+
+*Power BI files and links to the dashboards will be provided later.*
 
 ## Conclusion
 
@@ -119,6 +127,3 @@ The project provides a comprehensive analysis of the [r/morocco](https://www.red
 - [Twitter-roBERTa-base model](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest)
 - [DistilRoBERTa-base model](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
