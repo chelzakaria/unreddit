@@ -95,6 +95,12 @@ The results of the analysis are visualized through interactive dashboards, provi
 
 > The first visualization shows the trending topics in the subreddit, the most common categories, and the word that were used the most in the posts and comments.
 
+### Visualization 3 : Sentiment/Emotion Analysis
+<img src="https://github.com/chelzakaria/unreddit/blob/main/images/viz_page3.png" alt="Visualization #1"/>
+
+> The third visualization shows the emotions expressed by the users in the subreddit for a given topic. 
+> N.B: The emotion "Neutral" is not included in the visualization since it's the most common emotion.
+
 *More visualizations TBA*
 
 *Power BI files and links to the dashboards will be provided later.*
